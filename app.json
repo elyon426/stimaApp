@@ -8,12 +8,6 @@
     "scheme": "stimaapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
-    "updates": {
-      "url": "https://u.expo.dev/aa83d81e-9b60-4292-bd16-a5e1b1090e38",
-      "enabled": true,
-      "checkAutomatically": "ON_LOAD",
-      "fallbackToCacheTimeout": 3000
-    },
     "runtimeVersion": {
       "policy": "appVersion"
     },
@@ -54,13 +48,8 @@
       ]
     ],
     "experiments": {
-  "typedRoutes": true,
-  "reactCompiler": false
-},
-    "extra": {
-      "eas": {
-        "projectId": "aa83d81e-9b60-4292-bd16-a5e1b1090e38"
-      }
+      "typedRoutes": true,
+      "reactCompiler": false
     },
     "owner": "elyon001"
   }
