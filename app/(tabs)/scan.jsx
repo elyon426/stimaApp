@@ -155,7 +155,7 @@ function ScanQRScreen() {
         <MaterialCommunityIcons name="line-scan" size={36} color={BRAND} style={styles.scanLine} />
       </View>
       <Text style={styles.scanTitle}>Scan Member QR</Text>
-      <Text style={styles.scanSub}>Point camera at a Biashara Sacco QR code to send or receive</Text>
+      <Text style={styles.scanSub}>Point camera at a Stima Sacco QR code to send or receive</Text>
     </View>
   );
 }

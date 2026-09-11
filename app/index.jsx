@@ -170,12 +170,12 @@ export default function ProfessionalSplashScreen() {
               { transform: [{ scale: logoScale }], opacity: logoOpacity },
             ]}
           >
-            <Image source={require('../assets/download.png')} style={styles.logo} />
+            <Image source={require('../assets/stimaLogo.png')} style={styles.logo} />
           </Animated.View>
         </View>
 
         <Animated.Text style={[styles.title, { opacity: titleOpacity }]}>
-          Biashara Sacco Society App
+          Stima Sacco Society App
         </Animated.Text>
 
         <Animated.Text style={[styles.subtitle, { opacity: subtitleOpacity }]}>
@@ -206,11 +206,11 @@ export default function ProfessionalSplashScreen() {
           />
 
           <View style={styles.logoWrapper}>
-            <Image source={require('../assets/download.png')} style={[styles.logo, styles.secondLogo]} />
+            <Image source={require('../assets/stimaLogo.png')} style={[styles.logo, styles.secondLogo]} />
           </View>
         </View>
 
-        <Text style={[styles.title, styles.secondTitle]}>Welcome to Biashara Sacco</Text>
+        <Text style={[styles.title, styles.secondTitle]}>Welcome to Stima Sacco</Text>
         <Text style={[styles.subtitle, styles.secondSubtitle]}>Your trusted financial partner</Text>
       </Animated.View>
     </SafeAreaView>
