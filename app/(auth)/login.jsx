@@ -8,8 +8,16 @@ import Toast from 'react-native-toast-message';
 
 const MAX_ATTEMPTS = 3;
 
+// ---- demo credentials (hardcoded for pitch/demo purposes) ----
+const DEMO_PIN = '123456';
+const DEMO_PASSWORD = 'stima2026';
+
 export default function SignInScreen() {
   const router = useRouter();
+
+  // ---- form state ----
+  const [pin, setPin] = useState('');
+  const [password, setPassword] = useState('');
 
   // ---- biometric state ----
   const [hasHardware, setHasHardware] = useState(false);
@@ -104,7 +112,16 @@ export default function SignInScreen() {
   };
 
   const handleSubmit = () => {
-    router.replace('/(tabs)');
+    if (pin === DEMO_PIN && password === DEMO_PASSWORD) {
+      Toast.show({ type: 'success', text1: 'Welcome back!' });
+      router.replace('/(tabs)');
+    } else {
+      Toast.show({
+        type: 'error',
+        text1: 'Incorrect PIN or password',
+        text2: 'Please check your details and try again.',
+      });
+    }
   };
 
   return (
@@ -113,7 +130,7 @@ export default function SignInScreen() {
       {/* Logo — top left corner */}
       <View style={styles.logoWrap}>
         <Image
-          source={require('../../assets/download.png')}
+          source={require('../../assets/stimaLogo.png')}
           style={styles.logo}
           resizeMode="contain"
         />
@@ -137,6 +154,8 @@ export default function SignInScreen() {
             keyboardType="numeric"
             secureTextEntry
             maxLength={6}
+            value={pin}
+            onChangeText={setPin}
           />
           <LinearGradient
             colors={['forestgreen', 'limegreen', 'yellowgreen', 'yellow']}
@@ -153,6 +172,8 @@ export default function SignInScreen() {
             placeholder="Enter your password"
             placeholderTextColor="#bbb"
             secureTextEntry
+            value={password}
+            onChangeText={setPassword}
           />
           <LinearGradient
             colors={['forestgreen', 'limegreen', 'yellowgreen', 'yellow']}
