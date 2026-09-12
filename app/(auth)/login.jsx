@@ -22,7 +22,7 @@ export default function SignInScreen() {
   // ---- biometric state ----
   const [hasHardware, setHasHardware] = useState(false);
   const [isEnrolled, setIsEnrolled] = useState(false);
-  const [biometricIcon, setBiometricIcon] = useState<'finger-print-outline' | 'scan-outline'>('finger-print-outline');
+  const [biometricIcon, setBiometricIcon] = useState('finger-print-outline');
   const [attempts, setAttempts] = useState(0);
 
   useEffect(() => {
